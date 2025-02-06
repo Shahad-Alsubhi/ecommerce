@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+.Container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (width>=80rem) {
+  .Container {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+}
+
+.openingMenu  {
+  animation: slideIn 2s ;
+}
+
+.closingMenu {
+  animation: slideOut 1s ;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+img {
+ 
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+img.loaded {
+  opacity: 1;
+}
