@@ -10,11 +10,11 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="Container bg-[#121212] w-full flex justify-between py-9 items-center relative ">
+    <header className="Container bg-[#121212] h-[97px] w-full flex justify-between py-9 items-center">
       <MobileMenu />
-      <Image src="/images/logo.svg" alt="logo"
-
-      />
+      <Image src="/images/logo.svg" alt="logo" 
+      customStyle="w-[143px]"
+       />
       <Navbar customStyle={"max-lg:hidden"} />
       <div
         className="md:ml-auto lg:ml-[120px] relative cursor-pointer"
@@ -25,7 +25,7 @@ const Header = () => {
             {cartItems.size}
           </span>
         )}
-        <Image src="/images/icon-cart.svg" alt="cart icon" />
+        <Image src="/images/icon-cart.svg" alt="cart icon" customStyle="w-[23px]" />
       </div>
     </header>
   );

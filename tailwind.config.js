@@ -6,15 +6,7 @@ export const content = [
 
 export const theme = {
   extend: {
-    keyframes: {
-      transfer: {
-        from: { transform: "translateX(100%)" },
-        to: { transform: "translateX(0%)" },
-      },
-    },
-    animation: {
-      transfer: "transfer 0.5s ease-in-out",
-    },
+    
   },
 };
 export const plugins = [];

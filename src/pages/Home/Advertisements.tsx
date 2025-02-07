@@ -5,7 +5,7 @@ const Advertisements = () => {
     <>
       <div className="lg:h-[560px] text-white justify-items-center bg-[#D87D4A] rounded-lg grid grid-cols-2 mb-7 items-center overflow-hidden max-lg:grid-cols-1 max-lg:grid-rows-[1fr_1.5fr] max-lg:py-16 max-lg:gap-10">
         <Image
-          src="https://res.cloudinary.com/deqnekemi/image/upload/v1738304154/image-speaker-zx9_bghirk.png"
+          src="https://res.cloudinary.com/deqnekemi/image/upload/f_webp/v1738304154/image-speaker-zx9_bghirk.png"
           customStyle="w-[410px] max-lg:w-[197px] h-fit lg:-mb-[90px] opacity-95 mx-auto max-lg:h-[237px]"
           alt=""
         />
@@ -34,14 +34,14 @@ const Advertisements = () => {
         </div>
         <Image
           customStyle=" h-full"
-          src="https://res.cloudinary.com/deqnekemi/image/upload/v1738590678/image-speaker-zx7_lwn6px_1_-removebg-preview_snfdh8.png"
+          src="https://res.cloudinary.com/deqnekemi/image/upload/f_webp/v1738590678/image-speaker-zx7_lwn6px_1_-removebg-preview_snfdh8.png"
           alt=""
         />
       </div>
       {/* adv 3 */}
       <div className="flex gap-4 max-md:flex-col mb-30">
         <Image
-          src="https://res.cloudinary.com/deqnekemi/image/upload/v1738304153/image-earphones-yx1_vrlwxp.jpg"
+          src="https://res.cloudinary.com/deqnekemi/image/upload/f_webp/v1738304153/image-earphones-yx1_vrlwxp.jpg"
           customStyle="rounded-lg md:w-[50%]"
           alt=""
         />

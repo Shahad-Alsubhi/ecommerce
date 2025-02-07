@@ -10,7 +10,7 @@ const ProductDetails = () => {
 
 
   return (
-    <div className="Container pt-14 lg:pt-16 ">
+    <div className="Container pt-9 lg:pt-12 ">
       <Link
         to={`/category/${categoryName}`}
         className="opacity-50 text-xl font-medium "

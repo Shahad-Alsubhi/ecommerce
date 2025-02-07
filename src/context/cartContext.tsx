@@ -27,8 +27,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<Map<string, CartItem>>(
     new Map<string, CartItem>()
   );
-  console.log(cartItems);
-
   return (
     <cartContext.Provider value={{ cartItems, setCartItems }}>
       {children}

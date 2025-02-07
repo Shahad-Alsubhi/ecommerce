@@ -15,7 +15,7 @@ const CategoryCard = ({ title,imgSrc }: { title: string ,imgSrc:string}) => {
       </h1>
       <button onClick={()=>navigate(`/category/${title.toLowerCase()}`)} className="text-sm  tracking-[1px] hover:text-[#D87D4A] font-bold text-[#7D7D7D] m-auto flex gap-2 items-center">
         SHOP
-        <Image src="/images/icon-arrow-right.svg" alt="arrow right" />
+        <Image src="/images/icon-arrow-right.svg" alt="arrow right" customStyle="w-2" />
       </button>
     </div>
   );

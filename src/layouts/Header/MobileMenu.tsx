@@ -3,7 +3,7 @@ import ProductCategorySection from "../../components/ProductCategorySection";
 import { useLocation } from "react-router-dom";
 
 const MobileMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const path=useLocation()
 
   useEffect(()=>handleClose,[path])
@@ -11,24 +11,24 @@ const MobileMenu = () => {
   const handleClose=()=>{
     document.getElementById("menu")?.classList.add("closingMenu")
     document.body.style.overflow="scroll"
-    setTimeout(()=>{setIsOpen(false)},1000)
+    setTimeout(()=>{setMenuOpen(false)},900)
   }
   return (
-    <div className="lg:hidden z-50">
-      {!isOpen ? (
+    <div className="lg:hidden  ">
+      {!menuOpen ? (
         <img
           src="/images/icon-hamburger.svg"
           alt="menu icon"
-          className="md:mr-8 loaded"
+          className="md:mr-8 w-[18px] loaded"
           onClick={() => {
-            setIsOpen(true);
+            setMenuOpen(true);
             document.body.style.overflow = "hidden";
 
           }}
         />
       ) : (
         <svg
-          width="16"
+          width="18"
           height="15"
           className=" md:mr-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -42,16 +42,22 @@ const MobileMenu = () => {
         </svg>
       )}
 
-      {isOpen && (
+      {menuOpen && (
         <div
           id="menu"
-          className={`openingMenu absolute top-[97px] left-0 w-full shadow-2xl`}
+          onClick={() => setMenuOpen(false)}
+          className={`openingMenu fixed  overflow-scroll bottom-0 top-[97px] z-50 left-0 w-full pb-7`}
         >
-          <div className="bg-white px-16">
+          <div className="bg-white px-16 -mt-14">
             <ProductCategorySection  />
           </div>
         </div>
       )}
+       {/* Backdrop */} 
+        {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black top-[97px] opacity-30 z-10"
+        ></div>)}
     </div>
   );
 };

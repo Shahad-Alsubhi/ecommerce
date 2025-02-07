@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+body {
+  height: 100%;
+  margin: 0;
+}
+
 .Container {
   padding-left: 2rem;
   padding-right: 2rem;

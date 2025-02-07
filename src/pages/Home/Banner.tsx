@@ -2,7 +2,7 @@ import Image from "../../components/Image";
 
 const Banner = () => {
   return (
-    <div className=" bg-[#131313] lg:px-8 xl:px-48  text-white relative flex gap-14 justify-between py-14 max-md:py-7  items-center max-lg:flex-col">
+    <div className=" bg-[#131313] lg:px-8 xl:px-48 text-white relative flex gap-14  justify-between py-14 max-md:py-7  items-center max-lg:flex-col">
       <hr className=" text-white/20 absolute top-0 right-8 left-4 xl:right-48 z-40 xl:left-48" />
       <div className="2xl:max-w-[40%] z-30 max-lg:absolute left-[50%] top-[50%] max-lg:-translate-y-[50%] max-lg:items-center max-lg:-translate-x-[50%] flex flex-col">
         <h1 className="text-white opacity-[50%] text-sm tracking-[10px] max-lg:text-center">
@@ -20,9 +20,9 @@ const Banner = () => {
         </button>
       </div>
       <Image
-        src="/images/Bitmap.png"
+        src="https://res.cloudinary.com/deqnekemi/image/upload/f_webp/v1738853980/Bitmap_rgo8gk.png"
         alt=""
-        customStyle="lg:w-[45%] lg:mr-6 opacity-30 rounded-full"
+        customStyle="w-[550px] shrink-0 h-[580px]  rounded-full opacity-15!"
       />
     </div>
   );
