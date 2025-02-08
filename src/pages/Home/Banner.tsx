@@ -22,7 +22,7 @@ const Banner = () => {
       <Image
         src="https://res.cloudinary.com/deqnekemi/image/upload/f_webp/v1738853980/Bitmap_rgo8gk.png"
         alt=""
-        customStyle="w-[550px] shrink-0 h-[580px] max-sm:h-auto  rounded-full opacity-15!"
+        customStyle="w-[550px] shrink-0 aspect-[550/580] rounded-full opacity-15!"
       />
     </div>
   );
