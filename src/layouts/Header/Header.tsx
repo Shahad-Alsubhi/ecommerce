@@ -3,7 +3,6 @@ import Navbar from "../../components/Navbar";
 import { cartContext } from "../../context/cartContext";
 import MobileMenu from "./MobileMenu";
 import { useNavigate } from "react-router-dom";
-import Image from "../../components/Image";
 
 const Header = () => {
   const { cartItems } = useContext(cartContext);
