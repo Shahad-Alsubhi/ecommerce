@@ -1,24 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import ProductCartItem from "./ProductCartItem";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
+import useCart from "../../hooks/useCart";
 
 const Checkout = () => {
   const navigate = useNavigate();
   const { cartItems } = useContext(cartContext);
-  const [total, setTotal] = useState(0);
+  const {handlePayment,calculateTotal}=useCart()
+  const total=calculateTotal()
   const shipping = 6.78;
+  
 
-  useEffect(
-    () =>
-      setTotal(
-        [...cartItems.values()].reduce(
-          (pre, item) => pre + parseFloat(item.price) * item.quantity,
-          0
-        )
-      ),
-    [cartItems]
-  );
+  
   return (
     <div className="Container bg-[#F2F2F2] pt-7 pb-20 min-h-[90vh]">
       {cartItems.size === 0 ? (
@@ -69,7 +63,7 @@ const Checkout = () => {
                   ${(total + shipping).toFixed(2)}
                 </span>
               </h2>
-              <button className="bg-[#D87D4A] text-nowrap justify-center w-full px-6 py-3 text-white tracking-[1px] font-medium text-sm hover:bg-[#fbaf85]">
+              <button onClick={()=>handlePayment()} className="bg-[#D87D4A] text-nowrap justify-center w-full px-6 py-3 text-white tracking-[1px] font-medium text-sm hover:bg-[#fbaf85]">
                 CONTINUE & PAY
               </button>
             </section>

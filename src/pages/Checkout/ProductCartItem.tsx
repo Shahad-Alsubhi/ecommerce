@@ -6,9 +6,9 @@ const ProductCartItem = ({item}:{item:CartItem}) => {
     <div className="flex gap-4 mb-5 items-center">
       <div className="rounded-lg bg-[#f1f1f1] shrink-0 p-3">
         <Image
-          customStyle="w-14 h-16"
+          customStyle="w-14 aspect-[14/15]"
           src={item.image}
-          alt=""
+          alt={item.title+" image"}
         />
       </div>
       <div className=" max-sm:w-[50%] overflow-hidden">

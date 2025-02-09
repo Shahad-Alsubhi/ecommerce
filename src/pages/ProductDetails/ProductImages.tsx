@@ -21,7 +21,7 @@ const ProductImages = ({ images }: { images: string[] }) => {
         >
           <img
             src="/images/left-arrow.png"
-            className="w-14 loaded"
+            className="w-8 lg:w-14 loaded"
             alt="left arrow"
             onClick={(e) =>{e.stopPropagation();
               setactiveImageIndex((index) =>
@@ -36,7 +36,7 @@ const ProductImages = ({ images }: { images: string[] }) => {
           />
           <img
             src="/images/right-arrow.png"
-            className="w-14 loaded "
+            className="w-8 lg:w-14 loaded "
             alt="right arrow"
             onClick={(e) =>{e.stopPropagation();
               setactiveImageIndex((index) =>

@@ -15,11 +15,11 @@ const ProductCard = ({
     <div
       className={`flex max-md:flex-col py-10 gap-10 items-center justify-between`}
     >
-      <div className="bg-[#F1F1F1] rounded-lg flex items-center h-full justify-center pt-10 pb-16 w-full md:w-[50%]">
-        <div className="w-[290px] h-[320px] flex justify-center items-center">
+      <div className="bg-[#F1F1F1] rounded-lg flex items-center h-full justify-center py-10 w-full md:w-[50%]">
+        <div className=" max-md:w-[170px] w-[200px]  aspect-[200/230] flex justify-center items-center">
           <Image
             src={imgURL}
-            alt=""
+            alt="product image"
           />
         </div>
       </div>
@@ -45,7 +45,7 @@ ProductCard.ProductInfo = ({
     <div
       className={`flex flex-col max-md:items-center md:max-w-[50%] *:max-md:text-center ${customStyle}`}
     >
-      <h2 className="font-bold my-3 w-[50%] text-[28px] xl:text-[40px] tracking-[1px] lg:tracking-[1.48px] leading-[32px] lg:leading-[44px]">
+      <h2 className="font-bold my-3 lg:w-[50%] text-[28px] xl:text-[40px] tracking-[1px] lg:tracking-[1.48px] leading-[32px] lg:leading-[44px]">
         {title}
       </h2>
       <p className="leading-[25px] font-medium text-base opacity-[70%] mb-7  ">

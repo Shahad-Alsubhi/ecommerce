@@ -32,12 +32,32 @@ const useCart = () => {
       toast.success("Successfully created!");
     }, 700);
   };
+
+  const calculateTotal = () => {
+    return [...cartItems.values()].reduce(
+      (pre, item) => pre + parseFloat(item.price) * item.quantity,
+      0
+    );
+  };
+  const handlePayment = async () => {
+    const res = await fetch(`/user/order`, {
+      method: "POST",
+      body: JSON.stringify({ total: calculateTotal() }),
+    });
+
+    if (res) {
+      const { redirect_url } = await res.json();
+      window.location.href = redirect_url;
+      setCartItems(new Map<string, CartItem>());
+    }
+  };
+
   return {
     handleAddtoCart,
     handleDecrement,
     handleIncrement,
     quantity,
-    isloading,
+    isloading,handlePayment,calculateTotal
   };
 };
 

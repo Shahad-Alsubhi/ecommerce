@@ -8,9 +8,8 @@ const ProductDetails = () => {
   const { categoryName, productId } = useParams();
   const product = products.get(categoryName!)![parseInt(productId!)];
 
-
   return (
-    <div className="Container pt-9 lg:pt-12 ">
+    <div className="Container pt-7 lg:pt-9 ">
       <Link
         to={`/category/${categoryName}`}
         className="opacity-50 text-xl font-medium "
@@ -25,7 +24,11 @@ const ProductDetails = () => {
         >
           <ProductCard.ProductPrice price={product.price} />
           <ProductCard.AddToCartBtn
-           item={{image:product.mainImg,price:product.price,title:product.title}}
+            item={{
+              image: product.mainImg,
+              price: product.price,
+              title: product.title,
+            }}
           />
         </ProductCard.ProductInfo>
       </ProductCard>
