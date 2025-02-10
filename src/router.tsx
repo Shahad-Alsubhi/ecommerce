@@ -4,6 +4,7 @@ import MainLayout from "./layouts/MainLayout";
 import Category from "./pages/Category/Category";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Checkout from "./pages/Checkout/Checkout";
+import OrderConfirmationModal from "./pages/Checkout/OrderConfirmationModal";
 
 const router = createBrowserRouter([
   {
@@ -31,5 +32,9 @@ const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path:"/payment-response",
+    element:<OrderConfirmationModal/>
+  }
 ]);
 export default router

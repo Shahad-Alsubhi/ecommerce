@@ -8,12 +8,9 @@ import CartProvider from "./context/cartContext";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    {/* <Suspense fallback="<h1>loading..</>"> */}
-
     <CartProvider>
     <RouterProvider router={router} />
     <Toaster position="top-right" />
     </CartProvider>
-    {/* </Suspense> */}
   </StrictMode>
 );

@@ -29,7 +29,7 @@ const useCart = () => {
         setCartItems(new Map(cartItems));
       }
       setIsLoading(false);
-      toast.success("Successfully created!");
+      toast.success("Item added to your cart successfully!");
     }, 700);
   };
 

@@ -1,6 +1,10 @@
+import { useParams } from "react-router-dom";
 import Image from "../../components/Image";
 
 const OrderConfirmationModal = () => {
+  const params=useParams()
+  console.log(params);
+  
   return (
     <div className="shadow-2xl bg-white rounded-xl max-md:w-[80%] mx-auto w-fit p-8 absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]">
       <Image src="/images/icon-order-confirmation.svg" alt="" />

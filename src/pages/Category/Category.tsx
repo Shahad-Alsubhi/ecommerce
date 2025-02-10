@@ -10,7 +10,7 @@ const Category = () => {
 
   return (
     <div className="Container relative">
-      <hr className=" text-white/20 absolute top-0 right-8 left-4 xl:right-48 z-40 xl:left-48" />
+      <hr className=" text-white/20 absolute top-0 right-8 left-8 xl:right-48 z-40 xl:left-48" />
       <h1 className="bg-[#121212] mb-10 py-8 uppercase text-[24px] md:text-[36px] text-center text-white xl:-mx-48 -mx-8">
         {categoryName}
       </h1>
