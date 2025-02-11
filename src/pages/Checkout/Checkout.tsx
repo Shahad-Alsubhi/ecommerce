@@ -12,7 +12,7 @@ const Checkout = () => {
   const shipping = 6.78;
 
   return (
-    <div className="Container bg-[#F2F2F2] pt-7 pb-20 min-h-[90vh]">
+    <div className={`Container bg-[#F2F2F2] pt-7 pb-20 min-h-[90vh] ${isloading&&"before:w-full before:h-full before:absolute before:top-0 before:bg-black/30 before:right-0"}`}>
       {cartItems.size === 0 ? (
         <h1 className="h-screen">your shopping cart is empty ..</h1>
       ) : (
