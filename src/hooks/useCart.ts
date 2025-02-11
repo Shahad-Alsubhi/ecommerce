@@ -42,9 +42,7 @@ const useCart = () => {
   const handlePayment = async () => {
     setIsLoading(true);
     const res = await fetch(
-      // `https://ecommerce-backend-pxr1.onrender.com/payment/init`
-      "http://localhost:5550/payment/init",
-
+      `https://ecommerce-backend-pxr1.onrender.com/payment/init`,
       {
         method: "POST",
         headers: {
