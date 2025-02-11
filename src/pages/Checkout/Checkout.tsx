@@ -7,12 +7,10 @@ import useCart from "../../hooks/useCart";
 const Checkout = () => {
   const navigate = useNavigate();
   const { cartItems } = useContext(cartContext);
-  const {handlePayment,calculateTotal}=useCart()
-  const total=calculateTotal()
+  const { handlePayment, calculateTotal, isloading } = useCart();
+  const total = calculateTotal();
   const shipping = 6.78;
-  
 
-  
   return (
     <div className="Container bg-[#F2F2F2] pt-7 pb-20 min-h-[90vh]">
       {cartItems.size === 0 ? (
@@ -63,8 +61,12 @@ const Checkout = () => {
                   ${(total + shipping).toFixed(2)}
                 </span>
               </h2>
-              <button onClick={()=>handlePayment()} className="bg-[#D87D4A] text-nowrap justify-center w-full px-6 py-3 text-white tracking-[1px] font-medium text-sm hover:bg-[#fbaf85]">
-                CONTINUE & PAY
+              <button
+                disabled={isloading}
+                onClick={() => handlePayment()}
+                className="bg-[#D87D4A] text-nowrap justify-center w-full px-6 py-3 text-white tracking-[1px] font-medium text-sm disabled:bg-[#fbaf85] hover:bg-[#fbaf85]"
+              >
+                {isloading ? "In Progress..." : "CONTINUE & PAY"}
               </button>
             </section>
           </div>

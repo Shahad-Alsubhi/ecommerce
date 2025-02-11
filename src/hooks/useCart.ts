@@ -40,6 +40,7 @@ const useCart = () => {
     );
   };
   const handlePayment = async () => {
+    setIsLoading(true);
     const res = await fetch(
       // `https://ecommerce-backend-pxr1.onrender.com/payment/init`
       "http://localhost:5550/payment/init",
@@ -58,10 +59,11 @@ const useCart = () => {
       window.location.href = redirect_url;
       setTimeout(() => {
         setCartItems(new Map<string, CartItem>());
-      }, 10000);
+      }, 20000);
     } else {
       console.log(res);
     }
+    setIsLoading(false);
   };
 
   return {
