@@ -40,15 +40,25 @@ const useCart = () => {
     );
   };
   const handlePayment = async () => {
-    const res = await fetch(`/user/order`, {
-      method: "POST",
-      body: JSON.stringify({ total: calculateTotal() }),
-    });
+    const res = await fetch(
+      // `https://ecommerce-backend-pxr1.onrender.com/payment/init`
+      "http://localhost:5550/payment/init",
 
-    if (res) {
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ total: 90 }),
+      }
+    );
+
+    if (res.status === 200) {
       const { redirect_url } = await res.json();
       window.location.href = redirect_url;
       setCartItems(new Map<string, CartItem>());
+    } else {
+      console.log(res);
     }
   };
 
@@ -57,7 +67,9 @@ const useCart = () => {
     handleDecrement,
     handleIncrement,
     quantity,
-    isloading,handlePayment,calculateTotal
+    isloading,
+    handlePayment,
+    calculateTotal,
   };
 };
 

@@ -33,7 +33,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path:"/payment-response",
+    path:"/payment-response/:res-message",
     element:<OrderConfirmationModal/>
   }
 ]);
