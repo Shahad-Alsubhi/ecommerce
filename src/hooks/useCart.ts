@@ -49,14 +49,16 @@ const useCart = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ total: 90 }),
+        body: JSON.stringify({ total: calculateTotal() }),
       }
     );
 
     if (res.status === 200) {
       const { redirect_url } = await res.json();
       window.location.href = redirect_url;
-      setCartItems(new Map<string, CartItem>());
+      setTimeout(() => {
+        setCartItems(new Map<string, CartItem>());
+      }, 10000);
     } else {
       console.log(res);
     }
