@@ -17,7 +17,7 @@ const Checkout = () => {
         <h1 className="h-screen">your shopping cart is empty ..</h1>
       ) : (
         <>
-          <button
+          <button disabled={isloading}
             className="opacity-50 text-xl font-medium mb-7 "
             onClick={() => navigate(-1)}
           >

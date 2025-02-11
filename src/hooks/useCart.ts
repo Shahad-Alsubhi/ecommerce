@@ -59,6 +59,7 @@ const useCart = () => {
         setCartItems(new Map<string, CartItem>());
       }, 20000);
     } else {
+      toast.error('something went wrong...')
       console.log(res);
     }
     setIsLoading(false);
