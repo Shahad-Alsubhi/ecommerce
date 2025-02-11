@@ -2,19 +2,19 @@ import { useNavigate, useParams } from "react-router-dom";
 import Image from "../../components/Image";
 
 const OrderConfirmationModal = () => {
-  const { resMessage } = useParams();
+  const { resMessage } = useParams();  
   const navigate=useNavigate()
 
   return (
     <div className="shadow-2xl bg-white rounded-xl max-md:w-[80%] mx-auto w-fit p-8 absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]">
       {resMessage === "Authorised" ? (
         <>
-          <Image src="/images/icon-order-confirmation.svg" alt="" />
-          <h1 className="text-2xl md:text-3xl font-bold my-9">
+          <Image src="/images/icon-order-confirmation.svg" alt="order icon" />
+          <h1 className="text-1xl md:text-2xl font-bold mt-9 mb-5">
             THANK YOU
             <br /> FOR YOUR ORDER
           </h1>
-          <p>Your transaction was completed successfully.</p>
+          <p className="font-bold">Your transaction was completed successfully.</p>
 
           {/* <section className="my-5 flex gap-0 *:p-5 max-md:flex-col ">
         <div className="bg-[#F1F1F1] rounded-t-lg md:rounded-l-lg md:rounded-tr-none ">
@@ -42,12 +42,12 @@ const OrderConfirmationModal = () => {
           </h1>
 
           <p>
-            Sorry, unable to complete your transaction at this time. No charges
+            Sorry, unable to complete your transaction at this time.<br/> No charges
             have been made.
           </p>
         </>
       )}
-      <button onClick={()=>navigate("/")} className="bg-[#D87D4A] w-full px-6 py-3 text-white tracking-[1px] font-bold text-sm hover:bg-[#fbaf85]">
+      <button onClick={()=>navigate("/")} className="bg-[#D87D4A] mt-4 w-full px-6 py-3 text-white tracking-[1px] font-bold text-sm hover:bg-[#fbaf85]">
         BACK TO HOME
       </button>
     </div>
