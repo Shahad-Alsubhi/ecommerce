@@ -12,12 +12,18 @@ const Checkout = () => {
   const shipping = 6.78;
 
   return (
-    <div className={`Container bg-[#F2F2F2] pt-7 pb-20 min-h-[90vh] ${isloading&&"before:w-full before:h-full before:absolute before:top-0 before:bg-black/30 before:right-0"}`}>
+    <div
+      className={`Container bg-[#F2F2F2] pt-7 pb-36 min-h-[90vh] ${
+        isloading &&
+        "before:w-full before:h-full before:absolute before:top-0 before:bg-black/30 before:right-0"
+      } -mb-16`}
+    >
       {cartItems.size === 0 ? (
         <h1 className="h-screen">your shopping cart is empty ..</h1>
       ) : (
         <>
-          <button disabled={isloading}
+          <button
+            disabled={isloading}
             className="opacity-50 text-xl font-medium mb-7 "
             onClick={() => navigate(-1)}
           >
@@ -40,25 +46,29 @@ const Checkout = () => {
               <h2 className="text-[#7f7f7f]">
                 TOTAL
                 <span className="ml-auto text-lg font-semibold text-black">
-                  ${(total - 0.05 * total).toFixed(2)}
+                  <span className="text-xs">SR</span>
+                  {(total - 0.05 * total).toFixed(2)}
                 </span>
               </h2>
               <h2 className="text-[#7f7f7f]">
                 SHIPPING
                 <span className="ml-auto text-lg font-semibold text-black">
-                  ${shipping}
+                  <span className="text-xs">SR</span>
+                  {shipping}
                 </span>
               </h2>
               <h2 className="text-[#7f7f7f]">
                 VAT 5% (INCLUDED)
                 <span className="ml-auto text-lg font-semibold text-black">
-                  ${(0.05 * total).toFixed(2)}
+                  <span className="text-xs">SR</span>
+                  {(0.05 * total).toFixed(2)}
                 </span>
               </h2>
               <h2 className="my-6 text-[#7f7f7f]">
                 GRAND TOTAL
                 <span className="ml-auto text-lg font-semibold text-[#D87D4A]">
-                  ${(total + shipping).toFixed(2)}
+                  <span className="text-xs">SR</span>
+                  {(total + shipping).toFixed(2)}
                 </span>
               </h2>
               <button

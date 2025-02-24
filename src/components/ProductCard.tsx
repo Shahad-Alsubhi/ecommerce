@@ -58,7 +58,7 @@ ProductCard.ProductInfo = ({
 };
 
 ProductCard.ProductPrice = ({ price }: { price: string }) => {
-  return <h2 className="text-black text-lg font-bold mb-9">{price}</h2>;
+  return <h2 className="text-black text-lg font-bold mb-9"><span className="text-xs">SR</span>{price}</h2>;
 };
 
 ProductCard.NavigateBtn = function NavigateBtn({

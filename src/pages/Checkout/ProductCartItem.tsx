@@ -13,7 +13,7 @@ const ProductCartItem = ({item}:{item:CartItem}) => {
       </div>
       <div className=" max-sm:w-[50%] overflow-hidden">
         <h1 className={`text-base font-bold leading-[25px] text-nowrap overflow-hidden overflow-ellipsis`}>{item.title}</h1>
-        <h2 className="opacity-50 text-sm font-semibold w-fit">{item.price}</h2>
+        <h2 className="opacity-50 text-sm font-semibold w-fit"><span className="text-xs">SR</span>{item.price}</h2>
       </div>
       <h3 className="ml-auto opacity-50">x{item.quantity}</h3>
     </div>
