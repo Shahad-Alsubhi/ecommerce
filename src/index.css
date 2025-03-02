@@ -17,7 +17,7 @@ body {
 }
 
 .openingMenu  {
-  animation: slideIn 2s ;
+  animation: slideIn 0.8s ;
 }
 
 .closingMenu {
